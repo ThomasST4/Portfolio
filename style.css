@@ -42,11 +42,6 @@
   --weight3: 600;
 }
 
-@font-face {
-  font-family: mainFont;
-  src: url(nokiafc22.ttf);
-}
-
 .top-header-title {
   margin: 0;
   font-size: small;
