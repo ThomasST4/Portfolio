@@ -1,0 +1,211 @@
+:root {
+  --background: #1a1a1a;
+  --foreground: #212121;
+
+  --textSecondary: #d4d4d4;
+  --primary: #3283d5;
+  --succes: #41c953;
+
+  --white: #ffffff;
+  --alert: #d44760;
+  --textSupporting: #9c9c9c;
+  --mistExtra: #393839;
+  --textShy: #5a5c5a;
+  --overlay: #070707;
+  --idle: #d2832d;
+  --text: #d4d4d4;
+  --mist: #282828;
+  --contrast: #ffffff;
+
+  --label1: #d44760;
+  --label2: #d2832d;
+  --label3: #c9c941;
+  --label4: #85c940;
+  --label5: #41c94c;
+  --label6: #41c984;
+  --label7: #41c9c9;
+  --label8: #3283d5;
+  --label9: #4040ca;
+  --label10: #8540c8;
+  --label11: #c940c9;
+  --label12: #d34767;
+}
+
+@font-face {
+  font-family: mainFont;
+  src: url(nokiafc22.ttf);
+}
+
+.top-header-title {
+  margin: 0;
+  font-size: small;
+  text-decoration: none;
+  color: var(--white);
+}
+
+.top-header {
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.main-container {
+  background-color: var(--background);
+  font-family: mainFont;
+  color: var(--textSecondary);
+}
+
+.welcome-header {
+  text-align: center;
+  padding: 1rem;
+}
+
+.text-highlight {
+  color: var(--label1);
+}
+
+.profile-picture {
+  border-radius: 50%;
+  width: 15rem;
+  height: 15rem;
+  border: 0.5rem dotted white;
+  box-shadow: 1px 18px 21px -3px rgba(0, 0, 0, 0.55);
+  -webkit-box-shadow: 1px 18px 21px -3px rgba(0, 0, 0, 0.55);
+  -moz-box-shadow: 1px 18px 21px -3px rgba(0, 0, 0, 0.55);
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project {
+  position: relative;
+  flex-basis: calc(20% - 2rem);
+  margin: 1rem;
+  border: 1px solid;
+  box-sizing: border-box;
+}
+
+.project::before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+
+.project .content {
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/*
+* -------------------------------------------------
+*                   ANIMATION CLASSES
+* -------------------------------------------------
+*/
+
+.fade-in {
+  -webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.slide-in-elliptic-top-fwd {
+  -webkit-animation: slide-in-elliptic-top-fwd 0.7s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+}
+
+.tracking-in-expand {
+  -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1)
+    both;
+  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+/*
+* -------------------------------------------------
+*                   ANIMATION KEYFRAMES
+* -------------------------------------------------
+*/
+
+/* fade-in */
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* slide-in-elliptic-top-fwd */
+
+@-webkit-keyframes slide-in-elliptic-top-fwd {
+  0% {
+    -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
+    transform: translateY(-600px) rotateX(-30deg) scale(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) rotateX(0) scale(1);
+    transform: translateY(0) rotateX(0) scale(1);
+    -webkit-transform-origin: 50% 1400px;
+    transform-origin: 50% 1400px;
+    opacity: 1;
+  }
+}
+@keyframes slide-in-elliptic-top-fwd {
+  0% {
+    -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
+    transform: translateY(-600px) rotateX(-30deg) scale(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) rotateX(0) scale(1);
+    transform: translateY(0) rotateX(0) scale(1);
+    -webkit-transform-origin: 50% 1400px;
+    transform-origin: 50% 1400px;
+    opacity: 1;
+  }
+}
+
+/* tracking-in-expand */
+
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
