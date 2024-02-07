@@ -3,8 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/b4a6535c69.js"
+      crossorigin="anonymous"
+    ></script>
 
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <title>ThomasSTA - Portfolio</title>
   </head>
 
@@ -16,51 +20,174 @@
     </div>
 
     <div class="welcome-header">
-      <hr style="margin-bottom: 5rem" />
       <img
         class="profile-picture fade-in"
         src="profile-picture.jpg"
         alt="ProfilePicture"
       />
       <h1 class="fade-in">
-        <span class="text-highlight">*</span> Thomas Svoldgaard Thomhav Andersen
-        <span class="text-highlight">*</span>
+        <span class="roll-in-blurred-right text-highlight">*</span> Thomas
+        Svoldgaard Thomhav Andersen
+        <span class="roll-in-blurred-left text-highlight">*</span>
       </h1>
-      <p class="slide-in-elliptic-top-fwd">
+      <p class="slide-in-blurred-left">
         < Here you can browse through my
         <span class="text-highlight">Portfolio</span> and see the different work
         I have done >
       </p>
-      <hr style="margin-top: 5rem" />
+      <button
+        class="button button1"
+        onClick="document.getElementById('About').scrollIntoView({behavior: 'smooth'});"
+      >
+        About
+      </button>
+      <button
+        class="button button1"
+        onClick="document.getElementById('Education').scrollIntoView({  behavior: 'smooth'});"
+      >
+        Experience
+      </button>
+      <button
+        class="button button1"
+        onClick="document.getElementById('Projects').scrollIntoView({  behavior: 'smooth'});"
+      >
+        Projects
+      </button>
     </div>
 
-    <div class="projects-container">
-      <div class="project">
-        <a href="">
-          <img
-            class="content fade-in"
-            src="placeholder.jpg"
-            alt="ProfilePicture"
-          />
-        </a>
+    <br>
+    <hr/>
+    <br>
+
+    <div class="about-me-container">
+      <h1 id="About">About Me</h1>
+      <p>
+        Driven and determined programmer with a passion for software, system,
+        and web development. My career goal is to specialize in these areas and
+        contribute to innovative projects. I am currently exploring diverse
+        avenues to identify my true passion while leveraging the knowledge
+        gained from my completed BSc in Medialogy at Aalborg University.
+        Additionally, I am actively pursuing a Medialogy Master's Degree to
+        further expand my expertise.
+      </p>
+      <p>
+        Currently, I am gaining practical experience as a part-time game and
+        system developer at INNOVAID, where I contribute to the development of
+        engaging gaming experiences. In parallel, I am honing my web development
+        skills by creating a dynamic website for a local diner, allowing me to
+        showcase my versatility and proficiency in this field.
+      </p>
+      <p>
+        I am excited about the endless possibilities that lie ahead in the world
+        of programming and am committed to continuous learning and growth to
+        achieve my ambitions. Connect with me to discuss potential
+        collaborations or opportunities in software, system, or web development.
+      </p>
+    </div>
+
+    <br>
+    <hr/>
+    <br>
+
+    <!-- Section: Timeline -->
+    <section class="py-5">
+      <h1 id="Education">Education</h1>
+      <ul class="timeline">
+        <li class="timeline-item mb-5">
+          <h5 class="fw-bold">Skive College with specialization in Office</h5>
+          <div class="badge badge-danger badge-outlined">
+            JULY 2017 - JUNE 2019
+          </div>
+          <p>Student prepatory progress EUX business</p>
+        </li>
+        <li class="timeline-item mb-5">
+          <h5 class="fw-bold">
+            Aalborg University Bachelor's Degree in Medialogy
+          </h5>
+          <div class="badge badge-danger badge-outlined">
+            JUNE 2019 - JUNE 2023
+          </div>
+        </li>
+        <li class="timeline-item mb-5">
+          <h5 class="fw-bold">
+            Aalborg University Master's Degree in Medialogy
+          </h5>
+          <div class="badge badge-danger badge-outlined">
+            JUNE 2023 - JUNE 2024
+          </div>
+        </li>
+      </ul>
+
+      <h1>Experience</h1>
+      <ul class="timeline">
+        <li class="timeline-item mb-5">
+          <h5 class="fw-bold">
+            Voluntary Graphic Designer at Retail Insights (Aalborg)
+          </h5>
+          <div class="badge badge-danger badge-outlined">
+            DECEMBER 2019 - AUGUST 2020
+          </div>
+          <p>
+            I was resopnsible for creating graphic design, where my work
+            covered: brochures, marketing and business proposals.
+          </p>
+        </li>
+        <li class="timeline-item mb-5">
+          <h5 class="fw-bold">
+            Game and System Developer at INNOVAID (Aalborg)
+          </h5>
+          <div class="badge badge-danger badge-outlined">
+            MONTH XXXX - MONTH XXXX
+          </div>
+          <p>
+            My work consists of creating games for people going through
+            rehabilitation, while also developing improvements to the current
+            system, which runs the games.
+          </p>
+        </li>
+        <li class="timeline-item mb-5">
+          <h5 class="fw-bold">Freelance Web Developer at Støvlen Skive</h5>
+          <div class="badge badge-danger badge-outlined">
+            MONTH XXXX - MONTH XXXX
+          </div>
+          <p>Developing and maintaining a website for a local diner.</p>
+        </li>
+      </ul>
+    </section>
+    <!-- Section: Timeline -->
+
+    <br>
+    <hr/>
+    <br>
+
+    <h1 id="Projects">Projects</h1>
+
+    <div class="grid">
+      <div class="project-card">
+        <div class="grid-header">Web Scraper</div>
+        <div class="project-content">
+          A webscraper which scrapes the ACM Digital Library and retrieves all
+          articles within a keyword, while saving relevant information about the
+          article
+        </div>
       </div>
-      <div class="project">
-        <a href="">
-          <img
-            class="content fade-in"
-            src="placeholder.jpg"
-            alt="ProfilePicture"
-          />
-        </a>
+      <div class="project-card">
+        <div class="grid-header">Project 2</div>
+        <div class="project-content">
+          Interesting Project Interesting Project Interesting Project
+          Interesting Project Interesting Project Interesting Project
+          Interesting Project Interesting Project Interesting Project
+          Interesting Project
+        </div>
       </div>
-      <div class="project">
-        <a href="">
-          <img
-            class="content fade-in"
-            src="placeholder.jpg"
-            alt="ProfilePicture"
-          />
-        </a>
+      <div class="project-card">
+        <div class="grid-header">Project 3</div>
+        <div class="project-content">
+          Interesting Project Interesting Project Interesting Project
+          Interesting Project Interesting Project Interesting Project
+          Interesting Project Interesting Project Interesting Project
+          Interesting Project
+        </div>
       </div>
     </div>
   </body>
