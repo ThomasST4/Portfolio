@@ -43,6 +43,14 @@
   --weight3: 600;
 }
 
+::-webkit-scrollbar {
+  background-color: var(--foreground);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--label1,,);
+}
+
 body::after {
   content: "";
   background-image: url("bgtest.png");
