@@ -36,6 +36,10 @@
 				About
 			</button>
 			<button class="button button1 slide-in-blurred-left"
+				onClick="document.getElementById('TechnicalSkills').scrollIntoView({behavior: 'smooth'});">
+				Technical Skills
+			</button>
+			<button class="button button1 slide-in-blurred-left"
 				onClick="document.getElementById('Education').scrollIntoView({  behavior: 'smooth'});">
 				Experience
 			</button>
@@ -81,6 +85,32 @@
 		</div>
 	</section>
 
+	<section class="technical-skills-section">
+		<h1 id="TechnicalSkills" class="sub-header" data-aos="zoom-in-left">Technical Skills</h1>
+		<div class="skill-grid" data-aos="zoom-in-left">
+			<div class="skill-card">
+				<div class="skill-header">Python</div>
+			</div>
+			<div class="skill-card">
+				<div class="skill-header">C#</div>
+			</div>
+			<div class="skill-card">
+				<div class="skill-header">SQL</div>
+			</div>
+			<div class="skill-card">
+				<div class="skill-header">HTML, CSS & JS</div>
+			</div>
+			<div class="skill-card">
+				<div class="skill-header">UI/UX</div>
+			</div>
+			<div class="skill-card">
+				<div class="skill-header">Socket Server</div>
+			</div>
+			<div class="skill-card">
+				<div class="skill-header">Project Management</div>
+			</div>
+		</div>
+	</section>
 
 	<!-- Section: Timeline -->
 	<section class="py-5 mb-12 ee-container" data-aos="zoom-in-left">
@@ -154,14 +184,28 @@
 		<div class="grid" data-aos="zoom-in-left">
 			<a class="project-hyperlink" href="https://github.com/ThomasST4/ACM-Webscraper" target="_blank">
 				<div class="project-card">
-					<div class="project-hyperlink grid-header">Web Scraper</div>
+					<div class="grid-header">Web Scraper</div>
 					<div class="project-content">
 						A webscraper which scrapes the ACM Digital Library and retrieves all
 						articles within a keyword, while saving relevant information about
-						the article
+						the article.
 					</div>
 					<ul class="flex flex-wrap ul-nl">
-						<li class="tag-badge mr-1.5 mt-2">Python</li>
+						<li class="tag-badge">Python</li>
+					</ul>
+				</div>
+			</a>
+			<a class="project-hyperlink" href="https://github.com/ThomasST4/RESQ_RASA_PROJECT" target="_blank">
+				<div class="project-card">
+					<div class="grid-header">Mobile App with ChatBot</div>
+					<div class="project-content">
+						This project was done on my Master's 10th Semester. It features a front-end mobile application, running with servers as the back-end and is capable of being downloaded and deployed on an Android Phone.
+					</div>
+					<ul class="flex flex-wrap ul-nl">
+						<li class="tag-badge">Python</li>
+						<li class="tag-badge">React-Native</li>
+						<li class="tag-badge">SQL</li>
+						<li class="tag-badge">RASA - ChatBot</li>
 					</ul>
 				</div>
 			</a>

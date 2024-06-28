@@ -221,7 +221,7 @@ body::after {
 .button1 {
   background-color: var(--background);
   color: white;
-  font-family: "Montserrat";
+  font-family: "Exo 2";
   font-weight: bold;
   border: 2px solid var(--label1);
 }
@@ -293,34 +293,61 @@ h5 {
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(5rem, 25rem));
+  display: flex;
+  flex-wrap: wrap;
   gap: 3rem;
+  justify-content: left;
 }
 
 .grid-header {
   background-color: var(--label1);
   font-weight: bold;
   padding: 0.5rem;
+  border-radius: 0.3rem 0.3rem 0 0; /* Rounded corners for top */
+  margin-bottom: 0;
 }
 
 .project-card {
-  aspect-ratio: 2/1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25rem;
   background-color: var(--foreground);
+  transition: background-color 0.3s, border 0.3s;
+  border-radius: 0.3rem; /* Ensure card has rounded corners */
+  overflow: hidden; /* Ensure content does not overflow card */
 }
 
 .project-card:hover {
   background-color: var(--background);
-  border: .175rem dashed var(--label1);
+  border: 0.175rem dashed var(--label1);
 }
 
-.project-hypericons {
-  text-align: center;
-  padding: 0.8rem;
+.project-content {
+  flex-grow: 1;
+  padding: 1rem; /* Add padding for content */
 }
 
 .project-hyperlink {
   text-decoration: none;
+  color: var(--white);
+}
+
+.ul-nl {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem; /* Add padding for badges */
+}
+
+.tag-badge {
+  background-color: var(--label1);
+  border-radius: 0.3rem;
+  padding: 0.5rem 0.75rem;
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
   color: var(--white);
 }
 
@@ -332,6 +359,29 @@ h5 {
   font-weight: 600;
   position: fixed;
   top: 0;
+}
+
+.skill-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  justify-content: left;
+}
+
+.skill-header {
+  background-color: var(--label1);
+  font-weight: bold;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  display: inline-block;
+}
+
+.skill-card {
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 @supports (aspect-ratio: 1 / 1) {
@@ -352,6 +402,11 @@ h5 {
   }
 
   .projects-section {
+    margin-left: 20rem;
+    margin-right: 20rem;
+  }
+
+  .technical-skills-section {
     margin-left: 20rem;
     margin-right: 20rem;
   }
